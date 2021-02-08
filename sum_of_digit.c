@@ -2,21 +2,31 @@
 
 int main()
 {
-	int number = 123456;
+	int digit;
+	
+	int length;
 
 	int remainder = 0;
 
 	int sum = 0;
 
 	int index = 1;
+	
+	printf("Please enter the length(maximum 9) of digit:\n");
+	
+	scanf("%d", &length);
+	
+	printf("Please enter the digit:\n");
+	
+	scanf("%d", &digit);	
 
-	while (index <= 6)
+	while (index <= length)
 	{
-		remainder = number % 10;
+		remainder = digit % 10;
 
 		sum = sum + remainder;
 
-		number = number / 10;
+		digit = digit / 10;
 
 		index++;
 	}
